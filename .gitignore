@@ -8,3 +8,4 @@ borderlands
 target
 .env
 tmp
+database.db
