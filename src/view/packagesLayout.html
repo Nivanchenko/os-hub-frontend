@@ -2,57 +2,22 @@
 <html>
     <head>
         <title>Репозиторий пакетов 1Script</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
-        <!-- @RenderSection("styles", false) -->
         <style>
-            .ui.form .inline.fields {
-                margin: 0.5em;
-            }
-            .ui.divider {
-                margin-top: 30pt;
-            }
-            p.centered {
-                font-size: 14pt;
-                text-align: center;
-            }
-
-            .ui.grid.message {
-                background-color: #00588c;
-                color: aliceblue;
-                box-shadow: none;
-                border-radius: 0;
-            }
-            .ui.grid.message .row {
-                margin-top: 2.7em;
-                margin-bottom: 2.7em;
-                text-align: center;
-            }
-            .ui.grid.message .row p {
-                line-height: 1.5;
-                margin-top: 1em;
-            }
-            .column p {
-                font-size: 12pt;
-            }
-            h1.ui.header, h2.ui.header {
-                font-family: 'Segoe UI', Arial, Helvetica, Verdana, sans-serif
-            }
-            #search-form {
-                margin-top: 2em;
+            #content {
+                margin-top: 70pt;
             }
         </style>
     </head>
     <body>
-       {{ ВывестиПоШаблону("./view/NavMenu.html", Ложь) }}
-        
-        @Контент
-
+        {{ ВывестиПоШаблону("./view/NavMenu.html", Модель.ЭтоСтраницаПакеты) }}
+        <div class="ui container" id="content">
+            @Контент
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
-        <!-- @RenderSection("scripts", false) -->
-        <script>
-            $('.pointing.menu .item').tab();
-        </script>
+        <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript" >
 			(function (d, w, c) {

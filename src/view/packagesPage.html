@@ -1,6 +1,6 @@
 <h1>Пакеты</h1>
 
-<form class="ui form" id="search-form" method="GET" asp-controller="packages" asp-action="search">
+<form class="ui form" id="search-form" method="GET">
     <div class="fields">
         <div class="field" style="width: 100%">
             <input type="text" 
@@ -24,7 +24,7 @@
         {% Для Каждого Пакет из Модель.Пакеты Цикл %}
 
             <tr>
-                <td>{{ Пакет.Название }}</td> <!-- TODO: тут по идее должна быть ссылка -->
+                <td><a href="/package/{{ Пакет.Название }}">{{ Пакет.Название }}</a></td>
                 <td>{{ Пакет.АктуальнаяВерсия }}</td>
                 <td><a href="{{ Пакет.АдресРепозитория }}">{{ Пакет.АдресРепозитория }}</a></td>
             </tr>
